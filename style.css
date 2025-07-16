@@ -1,0 +1,344 @@
+:root {
+    --peach: hsl(298, 90%, 88%);
+    --soft-orange: hsl(28, 100%, 80%);
+    --white: #ffffff;
+    --light-cream: #fffaf5;
+    --text-dark: #4a3b36;
+    --accent: hsl(315, 84%, 66%);
+    --font-title: 'Dancing Script', cursive;
+    --font-body: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--light-cream);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--white);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: var(--peach);
+}
+
+.logo {
+    font-family: var(--font-title);
+    font-size: 2rem;
+    color: var(--text-dark);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.burger {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--text-dark);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background-image: url('bungaa.jpg'); /* Ganti dengan link gambar bunga favoritmu */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    text-align: center
+}
+
+.hero-overlay {
+    background-color: rgba(255, 255, 255, 0.8); /* lapisan putih transparan */
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 90%;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-family: var(--font-title);
+    color: var(--text-dark);
+    margin-bottom: 1rem
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    background-color: hsl(315, 76%, 77%);
+    color: rgb(0, 0, 0);
+    padding: 0.8rem 1.6rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: hsl(315, 84%, 66%);
+}
+
+/* Produk Section */
+.produk {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: var(--white);
+}
+
+.produk h2 {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.produk-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.card {
+    background: var(--peach);
+    border-radius: 16px;
+    padding: 1.2rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.card h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.2rem;
+}
+
+.card p {
+    margin-bottom: 1rem;
+}
+
+.pesan-btn {
+    margin-top: auto;
+    background-color: hsl(315, 84%, 66%);
+    color: var(--white);
+    padding: 0.6rem 1.2rem;
+    border: 2px solid hsl(315, 84%, 66%);
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.pesan-btn:hover {
+    background-color: hsl(315, 84%, 66%);
+    color: var(--white);
+}
+
+/* Testimoni Section */
+.testimoni {
+    padding: 4rem 2rem;
+    background-color: hsl(315, 84%, 66%);
+    text-align: center;
+}
+
+.testimoni h2 {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.testi-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.testi {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 14px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Kontak Section */
+.kontak {
+    padding: 4rem 2rem;
+    background: var(--white);
+    text-align: center;
+}
+
+.kontak h2 {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: auto;
+}
+
+input, textarea {
+    padding: 0.8rem;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+button {
+    background-color: hsl(315, 76%, 77%);
+    color: #000000;
+    border: none;
+    padding: 0.9rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: hsl(315, 84%, 66%);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: hsl(315, 84%, 66%);
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        position: absolute;
+        top: 70px;
+        right: 2rem;
+        background-color: var(--white);
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .hero {
+        height: auto;
+        padding: 5rem 1rem;
+    }
+
+    .hero-overlay {
+        padding: 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .produk-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .card {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .pesan-btn {
+        margin-top: 1.2rem;
+        font-size: 1rem;
+        padding: 0.7rem 1.4rem;
+    }
+
+    .produk h2 {
+        font-size: 2rem;
+    }
+
+    form {
+        padding: 1rem;
+        gap: 1.2rem;
+    }
+
+    input, textarea {
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 0.8rem 1.4rem;
+    }
+}

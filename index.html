@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bunga Armida - Toko Bunga Online</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Armida Flower🌼</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#produk">Produk</a></li>
+      <li><a href="#testimoni">Testimoni</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+    <div class="burger" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-overlay">
+      <h1>Bunga untuk Setiap Momen 💐</h1>
+      <p>Segarkan harimu dengan buket bunga indah dari Bunga Armida</p>
+      <a href="#produk" class="btn">Lihat Katalog</a>
+    </div>
+  </section>   
+
+  <!-- Produk Section -->
+  <section class="produk" id="produk">
+    <h2>Produk Unggulan</h2>
+    <div class="produk-container">
+      <div class="card">
+        <img src="rose.jpg" alt="Rose" />
+        <h3>Rose Pink</h3>
+        <p>Rp 75.000</p>
+        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20memesan%20Rose%20Pink" class="btn pesan-btn">Pesan Sekarang</a>
+      </div>
+  
+      <div class="card">
+        <img src="tulip.jpg" alt="Tulip" />
+        <h3>Tulip Manis</h3>
+        <p>Rp 85.000</p>
+        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20memesan%20Tulip%20Manis" class="btn pesan-btn">Pesan Sekarang</a>
+      </div>
+  
+      <div class="card">
+        <img src="sunflower.jpg" alt="Sunflower" />
+        <h3>Sunflower Ceria</h3>
+        <p>Rp 90.000</p>
+        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20memesan%20Sunflower%20Ceria" class="btn pesan-btn">Pesan Sekarang</a>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Testimoni Section -->
+  <section class="testimoni" id="testimoni">
+    <h2>Testimoni Pelanggan</h2>
+    <div class="testi-container">
+      <div class="testi">
+        <p>“Buketnya cantik banget! Pengiriman cepat juga. Terima kasih Bloomy!”</p>
+        <span>- Alya</span>
+      </div>
+      <div class="testi">
+        <p>“Pas banget buat hadiah ulang tahun teman. Sukaa banget desainnya 💖”</p>
+        <span>- Rani</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontak Section -->
+  <section class="kontak" id="kontak">
+    <h2>Hubungi Kami</h2>
+    <form>
+      <input type="text" placeholder="Nama" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Pesan kamu" required></textarea>
+      <button type="submit">Kirim</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Cut Armida Adhana. All rights reserved.</p>
+  </footer>
+
+  <!-- JS Toggle -->
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
